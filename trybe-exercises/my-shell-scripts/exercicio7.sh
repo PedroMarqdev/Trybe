@@ -1,5 +1,5 @@
 #!/bin/bash
-  
+# Eu sou Tryber e...
  for FILES in "$@"
  do
  if [ -f "$FILES" ]
