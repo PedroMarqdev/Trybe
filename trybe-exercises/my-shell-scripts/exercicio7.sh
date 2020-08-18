@@ -1,5 +1,5 @@
 #!/bin/bash
-# Vou ter muito sucesso na programação!
+# "Vou ter muito sucesso na programação!"
  for FILES in "$@"
  do
  if [ -f "$FILES" ]
