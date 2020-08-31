@@ -1,0 +1,26 @@
+Está na hora da festa!
+-Vá ao armário.
+        -Se o armário estiver fechado
+            Abra as duas portas, uma com a mão direita e outra com a esquerda.
+        -Se o armário estiver aberto
+           Procure por a camisa preferida e calça
+           Caso ache, pegue-as, uma por vez e as coloque na cama.
+           Senão, saia do quarto e vá até a sala.
+    Na sala, grite por sua mãe e pergunte sobre as roupas preferidas.
+    Se sua mãe responder, vá até os locais que ela descreveu e se as roupas estiverem, pegue-as e coloque na cama, caso não estejam, pergunte novamente e repita o ciclo até achar.
+    Se sua mãe não responder, volte ao quarto, vá até o armario e pegue qualquer roupa disponível, uma por uma, até você tiver uma camisa e uma calça.
+    Coloque as roupas que escolheu na cama.
+    Procure um sapato ao lado do armario, se tiver, pegue e coloque ao lado da cama, senão, procure por todo quarto até achar, se achar, coloque ao lado da cama, senão, ignore e vá até a cama.
+    Caso a cama possuir as roupas, vista cada uma, primeiro a camisa e depois a calça escolhida.
+    Senão, vá ao armário.
+        -Se o armário estiver fechado
+            Abra as duas portas, uma com a mão direita e outra com a esquerda.
+        -Se o armário estiver aberto
+           Procure por a camisa preferida e calça
+           Caso ache, pegue-as, uma por vez e as coloque na cama.
+           Senão, saia do quarto e vá até a sala.
+               Na sala, grite por sua mãe e pergunte sobre as roupas preferidas.
+    Se sua mãe responder, vá até os locais que ela descreveu e se as roupas estiverem, pegue-as e coloque na cama, caso não estejam, pergunte novamente e repita o ciclo até achar.
+    Se sua mãe não responder, volte ao quarto, vá até o armario e pegue qualquer roupa disponível, uma por uma, até você tiver uma camisa e uma calça.
+    Coloque as roupas que escolheu na cama.    
+           
