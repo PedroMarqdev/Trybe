@@ -7,7 +7,7 @@ else if (salario > 1556.95 && salario < 2594.92) {
     salario *= 0.91
 }
 else if (salario > 2594.93 && salario < 5189.82) {
-    salario *= 0.89 * salario;
+    salario *= 0.89
 }
 else if (salario > 5189.82) {
     salario -= 570.88;
