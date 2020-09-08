@@ -74,6 +74,19 @@
       filhoDivClassF.innerText = "Opa, isso é um teste!";
       document.getElementsByClassName("center-content")[0].appendChild(filhoDivClassF);
 
+      let leftDiv = document.createElement("div")
+      leftDiv.className = "left-content"
+      document.getElementsByClassName("main-content")[0].appendChild(leftDiv)
+
+      let rightDiv = document.createElement("div")
+      rightDiv.className = "right-content"
+      document.getElementsByClassName("main-content")[0].appendChild(rightDiv)
+
+      let image = document.createElement("img")
+      image.src = "https://picsum.photos/200"
+      image.className = "small-image"
+      document.getElementsByClassName("left-content")[0].appendChild(image)
+
     </script>
   </body>
 </html>
