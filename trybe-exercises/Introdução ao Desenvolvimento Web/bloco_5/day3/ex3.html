@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercício - Parte 2</title>
+    <script>      
+    </script>
+  </head> 
+  <body>
+    <div>
+      <h1>Exercício - Parte 2</h1>
+      <hr />
+      <h2>Tarefa 1</h2>
+      <p>
+        Adicione um botão HTML na área indicada abaixo. Usando um
+        <strong>EventListener</strong> adicione um evento ao botão, onde ao ser
+        clicado um alerta contendo a mensagem "Você clicou no botão" deverá ser
+        exibido.
+      </p>
+      <div class="tarefa1">Adicione o botão aqui!</div>
+      <hr />
+      <h2>Tarefa 2</h2>
+      <p>
+        Para realizar essa tarefa utilize à tag &lt;script&gt; abaixo. Você deve
+        declarar duas variáveis, uma chamada <strong>productPrice</strong> com o
+        valor <strong>59,99</strong> e a outra chamada
+        <strong>discount</strong> com o valor <strong>0,30</strong>. Na
+        sequência adicione um botão um botão HTML abaixo da tag &lt;script&gt; e
+        utilizando um <strong>EventListener</strong> adicione um evento a esse
+        botão, onde ao ser clicado deve-se multiplicar
+        <strong>productPrice</strong> por <strong>discount</strong> e então
+        exibir um alerta contendo a mensagem "Desconto de R$(resultado)", sendo
+        <strong>discount</strong> o resultado da multiplicação.
+      </p>
+      <script language="javascript" type="text/javascript">
+
+        let tarefa1 = document.querySelector(".tarefa1")
+        let botao = document.createElement("button")
+        botao.innerText = "HTML"
+        botao.addEventListener("click", function(){
+            alert("Você clicou no botão")
+        })
+        tarefa1.appendChild(botao)
+        
+
+        let botao2 =document.createElement("button")
+        botao2.innerText = "HTML"
+        botao2.addEventListener("click", function() {
+            let productPrice = 59.99
+            let discount = 0.30
+            let calculo = productPrice * discount
+            discount = productPrice - calculo
+            alert(`Desconto de R$${discount}`)
+        })
+        document.querySelectorAll("script")[1].insertAdjacentElement("afterend", botao2);
+      
+        let imagem = document.createElement("img")
+        let ultimadiv = document.querySelectorAll("div")
+        ultimadiv[ultimadiv.length - 2].insertAdjacentElement("afterend", imagem);
+        imagem.src = "https://t1.pixers.pics/img-1fb6f67c/autocolantes-fire-ball.jpg?H4sIAAAAAAAAA3VO7W6DMAx8nSBRbCdOAjxA__YRUAqhY3wqSddpT7-gaj8n62T75PMdPLfoRg-935IPsE7DsHgYpyVvsQ0-Tj9eYGmRizazi0DEot2_fOjDfohLXZcnbCNPFO3LZeHqwiw-UjpiCxBVdUzf-VtufYR-jSCRLKAB3WhD6Fk3DVK3uXnJl5f55YbgUnVsjxLPKv5yMGLJp38K0ypyoD1bJfF5PAr4x-49Q1bB9QaKgWowFphOqrveFFNtLFM3aPbeEDk13GtN2hrNRkoenTWSrKqyyy_uBzq4LQEAAA=="
+        imagem.addEventListener("mouseover", function(){
+            imagem.src = "https://t1.pixers.pics/img-1fb6f67c/autocolantes-fire-ball.jpg?H4sIAAAAAAAAA3VO7W6DMAx8nSBRbCdOAjxA__YRUAqhY3wqSddpT7-gaj8n62T75PMdPLfoRg-935IPsE7DsHgYpyVvsQ0-Tj9eYGmRizazi0DEot2_fOjDfohLXZcnbCNPFO3LZeHqwiw-UjpiCxBVdUzf-VtufYR-jSCRLKAB3WhD6Fk3DVK3uXnJl5f55YbgUnVsjxLPKv5yMGLJp38K0ypyoD1bJfF5PAr4x-49Q1bB9QaKgWowFphOqrveFFNtLFM3aPbeEDk13GtN2hrNRkoenTWSrKqyyy_uBzq4LQEAAA=="
+        })
+        imagem.addEventListener("mouseleave", function(){
+            imagem.src = "https://s1.static.brasilescola.uol.com.br/be/conteudo/images/gua.jpg"
+        })
+      </script>
+      <hr />
+      <h2>Bônus</h2>
+      <p>
+        Para essa última tarefa você irá precisar de duas imagens do mesmo
+        tamanho. Adicione uma imagem a está página usando uma tag HTML &lt;img
+        /&gt;. Usando os manipuladores de eventos
+        <strong>onMouseOver()</strong> e <strong>onMouseLeave()</strong>, faça com
+        que a imagem mude para a segunda imagem quando o ponteiro do mouse
+        passar sobre ela e, em seguida, voltar para a primeira imagem quando o
+        ponteiro do mouse for movido para fora da imagem.
+      </p>
+      <p>
+        Além disso, sempre que um dos eventos for realizado deve-se logar no
+        console qual dos eventos acabou de ocorrer.
+      </p>
+      
+    </div>
+  </body>
+</html>
