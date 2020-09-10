@@ -1,0 +1,44 @@
+Start with this webpage, which has a single img tag of an animated GIF of a cat walking.
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8" />
+  <title>Cat Walk</title>
+ </head>
+ <body>
+  
+  <img style="position:absolute;" src="http://www.anniemation.com/clip_art/images/cat-walk.gif">
+  
+ </body>
+ <script>
+    let gato = document.querySelector("img")
+    gato.style.left = "0px"
+    let gatoInt = parseInt(gato.style.left)
+    let andar = true
+    function catWalk(){
+        if(gatoInt == (window.innerWidth / 2)){
+        gato.src = "https://64.media.tumblr.com/5663a9206199985b44a2e5f1536d68ae/tumblr_p7eumhrz7e1vpf6ddo1_400.gifv"
+        }
+        if(gatoInt == 0){
+            andar = true
+        }
+        if(andar == false){
+        gato.style.left = gatoInt + "px"
+        gatoInt -= 10
+    }
+    else if(andar == true){
+        gato.style.left = gatoInt + "px"
+        gatoInt += 10
+    }
+      if(gatoInt == window.innerWidth){
+        andar = false      
+    }
+
+
+    
+
+    }
+        
+    setInterval(catWalk, 50)
+ </script>
+</html>
