@@ -1,0 +1,86 @@
+Start with this webpage, which has inputs and buttons for things to calculate:
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Calculator</title>
+</head>
+<body>
+
+  <label>Square this number:
+    <input type="number" id="square-input" size="2">
+  </label>
+  <button id="square-button">Calculate</button>
+  <br><br>
+  
+  <label>Half this number:
+    <input type="number" id="half-input" size="2">
+  </label>
+  <button id="half-button">Calculate</button>
+  <br><br>
+  
+  <label>
+    Fraction:
+    <input type="number" id="percent1-input" size="2">
+  </label>
+  <label>
+    Whole:
+    <input type="number" id="percent2-input" size="2">
+  </label>
+  <button id="percent-button">Calculate</button>
+  <br><br>
+  
+  <label>Calculate area of circle with radius:
+    <input type="number" id="area-input" size="2">
+  </label>
+  <button id="area-button">Calculate</button> 
+  <br><br>
+  <div id="solution"></div>
+  <script>
+    //1
+        let change1 = document.querySelector("#square-input")
+          change1.addEventListener("change", function(){
+            let valor = change1.value
+            let quadrado = Math.pow(valor, 2)
+            let calculo = quadrado
+            document.querySelector("#solution").innerText = calculo
+            let resultado = document.querySelector("#solution").innerText
+            alert(`O resultado é: ${resultado}`)    
+            })  
+    //2
+        let change2 = document.querySelector("#half-input")
+              change2.addEventListener("change", function(){
+                let valor = change2.value
+                let calculo = valor / 2
+                document.querySelector("#solution").innerText = calculo
+                let resultado = document.querySelector("#solution").innerText
+                alert(`O resultado é: ${resultado}`)    
+                })    
+    //3
+    let change3 = document.querySelector("#percent2-input")
+              change3.addEventListener("change", function(){
+                let valor = document.querySelector("#percent1-input").value
+                let valor2 = document.querySelector("#percent2-input").value
+                let calculo = valor2 / valor
+                document.querySelector("#solution").innerText = calculo
+                let resultado = document.querySelector("#solution").innerText
+                alert(`O resultado é: ${resultado}`)    
+                })
+    //4
+    let change4 = document.querySelector("#area-input")
+              change4.addEventListener("change", function(){
+                let valor = change4.value
+                let quadrado = Math.pow(valor, 2)
+                let calculo = 3.14 * quadrado
+                document.querySelector("#solution").innerText = calculo
+                let resultado = document.querySelector("#solution").innerText
+                alert(`O resultado é: ${resultado}`)    
+                })        
+    
+
+  </script>
+</body>
+</html>
+Add a script tag, and add the functions from the calculator exercise (view the solution if you haven't done it yet).
+For each operation, create an event listener for the button, and when it's clicked, find the value of the appropriate input and show the result of the calculation in the solution div.
+Bonus: respond to key presses so that the user doesn't have to click the button.
