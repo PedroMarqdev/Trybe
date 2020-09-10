@@ -55,7 +55,25 @@ Start with this webpage, which has inputs and buttons for things to calculate:
                 let resultado = document.querySelector("#solution").innerText
                 alert(`O resultado é: ${resultado}`)    
                 })    
-
+    //3
+    let botao3 = document.querySelector("#percent-button")
+              botao3.addEventListener("click", function(){
+                let valor = document.querySelector("#percent1-input").value
+                let valor2 = document.querySelector("#percent2-input").value
+                let calculo = valor2 / valor
+                document.querySelector("#solution").innerText = calculo
+                let resultado = document.querySelector("#solution").innerText
+                alert(`O resultado é: ${resultado}`)    
+                })
+    //4
+    let botao4 = document.querySelector("#area-button")
+              botao4.addEventListener("click", function(){
+                let valor = document.querySelector("#area-input").value
+                let calculo = (2 * 3.14 * valor)
+                document.querySelector("#solution").innerText = calculo
+                let resultado = document.querySelector("#solution").innerText
+                alert(`O resultado é: ${resultado}`)    
+                })        
     
 
   </script>
