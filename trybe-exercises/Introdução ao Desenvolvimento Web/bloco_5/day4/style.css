@@ -1,0 +1,29 @@
+
+.headerText, p{
+    text-align: center;
+}
+
+
+.firstLine{
+    margin-left: 320px;
+}
+.secondLine{
+    margin-left: 320px;
+
+}
+
+.first-box-text{
+    margin: 50px;
+    text-align: center;
+    display: inline-block;
+    height: 200px;
+    width: 500px
+}
+
+.second-box-text{
+    margin: 50px;
+    text-align: center;
+    display: inline-block;
+    height: 200px;
+    width: 500px
+}
