@@ -21,21 +21,22 @@
 }
 
 .second-box-text{
-    margin: 50px;
-    text-align: center;
     display: inline-block;
     height: 200px;
+    margin: 50px;
+    text-align: center;
     width: 500px
 }
 
 .darkMod{
-    height: 25px;
-    font-size: 20px;
     background-color: rgb(102 , 46 , 155);
-    color:  rgb( 249 , 200 , 14);
-    text-decoration: none;
     border: 0.5px solid rgba(255, 255, 255, 0.11) ;
     border-top-left-radius: 50%;
     border-top-right-radius: 50%;
+    font-size: 20px;
+    height: 25px;
+    color:  rgb( 249 , 200 , 14);
+    text-decoration: none;
     opacity: 80%;
 }
+
