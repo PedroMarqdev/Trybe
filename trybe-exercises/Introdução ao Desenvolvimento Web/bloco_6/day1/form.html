@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class='header-content'>
+        <h1>Bem vindo!</h1>
+        <p>Será uma honra ter você em nossa empresa!<br>Preencha os dados abaixo.</p>
+    </header>
+        <div class='form-content'>
+            <form action="" method="get" class='curriculum-form'>
+                <fieldset>
+                    <div class='line-content'>
+                        <label for='name'>Nome:</label>
+                        <input type="text" maxlength="40" id='name' name='name' class='insert' required>
+                    </div>
+
+                    <div class='line-content'>
+                        <label for='email'>Email:</label>
+                        <input type="text" maxlength="50" id='email' name='email' class='insert'required>
+                    </div>
+
+                    <div class='line-content'>
+                        <label for='cpf'>CPF:</label>
+                        <input type="text" maxlength="11" id='cpf' name='cpf' class='insert'required>
+                    </div>
+
+                    <div class='line-content'>
+                        <label for='endereco'>Endereço:</label>
+                        <input type="text" maxlength="200" id='endereco' name='endereco' class='insert'required>
+                    </div>
+
+                    <div class='line-content'>
+                        <label for='states'>Estados</label>
+                        <select class='estados' id='states' name='estado'></select required>
+                    </div>
+
+                    <div class='line-content'>
+                        <label for=''>Tipo de residência:</label>
+                        <div class='residence-box'>
+                            <label for="casa">Casa</label>
+                            <input type="radio" id='casa' name='residence' value='casa' class='residence'>
+                        </div>
+                        <div class='residence-box'>                       
+                             <label for="apartamento">Apartamento</label>
+                            <input type="radio" id='apartamento' name='residence' value='apartamento' class='residence'>
+                        </div>
+
+                    </div>
+
+                    <div class='line-content'>
+                        <label for=''>Email:</label>
+                        <input type="text" maxlength="50" id='email' name='emai' class='insert'>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+
+
+        </form>
+<script src='script.js'></script>
+</body>
+
+</html>
