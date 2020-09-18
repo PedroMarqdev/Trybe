@@ -13,9 +13,10 @@
         <h1>Bem vindo!</h1>
         <p>Será uma honra ter você em nossa empresa!<br>Preencha os dados abaixo.</p>
     </header>
-        <div class='form-content'>
+        <div class="form-content">
             <form action="" method="get" class='curriculum-form'>
                 <fieldset>
+                    <legend>Dados principais</legend>
                     <div class='line-content'>
                         <label for='name'>Nome:</label>
                         <input type="text" maxlength="40" id='name' name='name' class='insert' required>
@@ -45,19 +46,35 @@
                         <label for=''>Tipo de residência:</label>
                         <div class='residence-box'>
                             <label for="casa">Casa</label>
-                            <input type="radio" id='casa' name='residence' value='casa' class='residence'>
+                            <input type="radio" id='casa' name='residence' value='casa' class='residence' required>
                         </div>
                         <div class='residence-box'>                       
                              <label for="apartamento">Apartamento</label>
-                            <input type="radio" id='apartamento' name='residence' value='apartamento' class='residence'>
+                            <input type="radio" id='apartamento' name='residence' value='apartamento' class='residence' required>
                         </div>
 
                     </div>
-
+                </fieldset>
+                <fieldset>
+                    <legend>Dados do último emprego</legend>
                     <div class='line-content'>
-                        <label for=''>Email:</label>
-                        <input type="text" maxlength="50" id='email' name='emai' class='insert'>
+                        <label for="resume">Resumo</label>
+                        <textarea id=resume maxlength='1000' cols='100' rows='10'></textarea required>
                     </div>
+                    <div class='line-content'>
+                        <label for='cargo'>Cargo:</label>
+                        <input type="text" maxlength="40" id='cargo' name='cargo' class='insert'required>
+                    </div>
+                    <div class='line-content'>                    
+                        <label for="histCargo">Descrição do Cargo</label>
+                        <textarea maxlength='500' cols=' 100' rows='5' id='histCargo' name='histCargo'></textarea required>
+                         </div>
+                         <div class='line-content'>
+                            <label for='data'>Data de ínicio</label>
+                            <input type="text" maxlength="10" id='data' value='' name='dataInicio'class='insert data'required>
+                        </div>
+                        <button id='submitButton'>Enviar</button>
+                        <button id='erase'>Limpar</button>
                 </fieldset>
             </form>
         </div>

@@ -1,41 +1,59 @@
 body {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    background-color: rgba(4, 15, 217, 0.479)
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(4, 15, 217, 0.479);
 }
 
-.header-content, .curriculum-form{
-    background-color: rgb(242 , 231 , 75);
-    color: rgb(1 , 4, 64);
-    font-family: Helvetica;
-    font-style: italic;
-    font-weight: 700;
-    margin: 10px auto 0 auto;
+.header-content, .curriculum-form, .resultado {
+  background-color: rgb(242, 231, 75);
+  color: rgb(1, 4, 64);
+  font-family: Helvetica;
+  font-style: italic;
+  font-weight: 700;
+  margin: 10px auto 0 auto;
+  text-align: center;
+  width: 80%;
+  padding: 2px;
+  border-radius: 10px;
+}
+
+.curriculum-form {
+  height: 1000px;
+  margin: 50px auto 20px auto;
+  padding: 50px;
+  text-align: left;
+}
+
+.insert {
     text-align: center;
-    width: 80%;
-    padding: 2px;
+  border-radius: 10px;
+  border: 1px solid;
+  font-size: 20px;
+  width: 100%;
+}
+
+.line-content {
+  margin: 10px;
+}
+
+.residence-box {
+  display: inline-block;
+  margin: 5px 10px 5px
+}
+
+fieldset{
+    text-align: center;
+    margin-top: 20px;
     border-radius: 10px;
 }
 
-.curriculum-form{
-    padding: 50px;;
-    text-align: left;
-    margin: 50px auto 20px auto;;
-    height: 500px;
+label{
+    margin: 5px;
+    display:block;
 }
 
-.insert{
+textarea{
+    border-radius: 10px;
     width: 100%;
-    font-size: 20px;
 }
-
-.line-content{
-    margin: 10px;
-}
-
-.residence-box{
-    display: inline-block;
-    margin-left: 20px;
-}
-
