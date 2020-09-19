@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="semantic.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class='ui text container'>
+            <div class='ui huge header ui center aligned'>
+                <p>Bem vindo!</p>
+                <h2 class='ui sub header'>Será uma honra ter você em nossa empresa!<br>Preencha os dados abaixo.</h2>
+            </div>
+        </div>
+    </header>
+    <form class='ui form'>
+        <div class='field'>
+            <label for='first-name'>Nome:</label>
+            <input type="text" maxlength="40" id='first-name' name='first-name' placeholder='Primeiro nome' required>
+        </div>
+
+        <div class='field'>
+            <label for='email'>Email:</label>
+            <input type="text" maxlength="50" id='email' name='email' placeholder='Email' required>
+        </div>
+
+        <div class='field'>
+            <label for='cpf'>CPF:</label>
+            <input type="number" maxlength="11" id='cpf' name='cpf' placeholder='CPF' required>
+        </div>
+
+        <div class='field'>
+            <label for='endereco'>Endereço:</label>
+            <input type="text" maxlength="200" id='endereco' name='endereco' placeholder='Endereço' required>
+        </div>
+        <div class='ui form'>
+            <div class='field'>
+                <label for='states'>Estados</label>
+                <select class='ui search dropdown' id='search-select' name='estado'>
+                    <option value="">Escolha o estado</option>
+                </select>
+
+            </div>
+        </div>
+        <div class='field'>
+            <label for=''>Tipo de residência:</label>
+            <div class='ui radio checkbox'>
+                <input type="radio" id='casa' name='residence' value='casa' class='hidden' required>
+                <label for="casa">Casa</label>
+            </div>
+        </div>
+        <div class='field'>
+            <div class='ui radio checkbox'>
+                <input type="radio" id='apartamento' name='residence' value='apartamento' class='hidden' required>
+                <label for="apartamento">Apartamento</label>
+            </div>
+        </div>
+        <div class='field'>
+            <label for="resume">Resumo</label>
+            <textarea id=resume maxlength='1000' cols='100' rows='10'></textarea required>
+                    </div>
+                    <div class='field'>
+                        <label for='cargo'>Cargo:</label>
+                        <input type="text" maxlength="40" id='cargo' name='cargo'equired>
+                    </div>
+                    <div class='field'>                    
+                        <label for="histCargo">Descrição do Cargo</label>
+                        <textarea maxlength='500' cols=' 100' rows='5' id='histCargo' name='histCargo'></textarea required>
+                         </div>
+                         <div class='field'>
+                            <label for='data'>Data de ínicio</label>
+                            <input type="text" maxlength="10" id='data' value='' name='dataInicio'class='insert data'required>
+                        </div>
+                        <button id='submitButton'>Enviar</button>
+                        <button id='erase'>Limpar</button>
+            </form>
+        </div>
+<script src='script.js'></script>
+</body>
+
+</html>
