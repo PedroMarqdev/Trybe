@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="semantic.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class='ui text container'>
+            <div class='ui huge header ui center aligned'>
+                <p>Bem vindo!</p>
+                <h2 class='ui sub header'>Será uma honra ter você em nossa empresa!<br>Preencha os dados abaixo.</h2>
+            </div>
+        </div>
+    </header>
+    <form action='#' class='ui form tasker'>
+        <div class='field'>
+            <label for='first-name'>Nome:</label>
+            <input type="text" data-validate-field="name" id='first-name' name='first-name'  placeholder='Primeiro nome'>
+        </div>
+
+        <div class='field'>
+            <label for='email'>Email:</label>
+            <input type="text" maxlength="50" id='email' name='email'  data-validate-field="email" placeholder='Email' >
+        </div>
+
+        <div class='field'>
+            <label for='cpf'>CPF:</label>
+            <input type="number" maxlength="11" id='cpf' name='cpf' data-validate-field="cpf" placeholder='CPF' >
+        </div>
+
+        <div class='field'>
+            <label for='endereco'>Endereço:</label>
+            <input type="text" maxlength="200" id='endereco' data-validate-field="endereco" name='endereco' placeholder='Endereço' >
+        </div>
+            <div class='field'>
+                <label for='states'>Estados</label>
+                <select class='ui search dropdown' id='search-select' data-validate-field="estado" name='estado'>
+                </select>
+            </div>
+            <div class='field'>
+                <label for=''>Tipo de residência:</label>
+                <div class='ui radio checkbox'>
+                    <input type="radio" id='casa' name='residence' data-validate-field="residencia" value='casa' class='hidden' >
+                    <label for="casa">Casa</label>
+                </div>
+                <div class='field'>
+                    <div class='ui radio checkbox'>
+                        <input type="radio" id='apartamento' name='residence' data-validate-field="residencia" value='apartamento' class='hidden' >
+                        <label for="apartamento">Apartamento</label>
+                    </div>
+                </div>
+        <div class='field'>
+            <label for="resume">Resumo</label>
+            <textarea id=resume maxlength='1000' cols='100'  data-validate-field="resumos" rows='10'></textarea >
+                    </div>
+                    <div class='field'>
+                        <label for='cargo'>Cargo:</label>
+                        <input type="text" maxlength="40" id='cargo' data-validate-field="cargo"  name='cargo'>
+                    </div>
+                    <div class='field'>                    
+                        <label for="histCargo">Descrição do Cargo</label>
+                        <textarea maxlength='500' cols=' 100' rows='5' data-validate-field="resumos2" id='histCargo' name='histCargo'></textarea >
+                         </div>
+                         <div class='field'>
+                             <label for='datepicker'>Data de ínicio:</label>
+                            <input type="text" data-validate-field="data" id="datepicker">
+                        </div>
+                        <div class='field'>
+                            <button id='submitButton' class='ui primary button'>Enviar</button>
+                            <button id='erase' class ='ui button'>Limpar</button>
+                        </div>
+            </form>
+        </div>
+<script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+<script src ='just-validate-min.js'></script>
+<script src='script.js'></script>
+<script>
+    new Pikaday({ field: document.getElementById('datepicker') }); 
+    
+new JustValidate('.tasker', {
+
+  rules: {
+    checkbox: {
+      required: true
+    },
+    myField: {
+      required: true
+    },
+    email: {
+      required: true,
+      email: true
+    },
+    password: {
+      strength: {
+        default: true,
+    }
+},
+    name: {
+      required: true,
+      minLength: 4,
+      maxLength: 20
+    },
+    cpf: {
+      required: true,
+      minLength: 11,
+      maxLength: 11
+    },
+    endereco: {
+      required: true,
+      maxLength: 50
+    },
+    resumos: {
+      required: true,
+      minLength: 200
+    },
+    resumos2: {
+      required: true,
+      minLength: 200
+    },
+    cargo: {
+      required: true,
+      maxLength: 30
+    },
+    data: {
+      required: true,
+    },
+    residencia: {
+      required: true,
+    },
+    estado: {
+      required: true,
+    }
+},
+messages: {
+    name: {
+        required: 'Campo obrigatório!',
+        minLength: 'Deve-se ter pelo menos :value caracteres'
+    },
+    
+},
+  submitHandler: function (form, values, ajax) {
+
+    ajax({
+      url: 'https://just-validate-api.herokuapp.com/submit',
+      method: 'POST',
+      data: values,
+      async: true,
+      callback: function(response)  {
+        console.log(values)
+      }
+    });
+  },
+});
+
+</script>
+</body>
+
+</html>
