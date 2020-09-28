@@ -17,6 +17,8 @@ const lesson1 = {
     professor: 'Maria Clara',
     turno: 'noite',
   };
-  const exercise2 = (object) => {
-      return Object.keys(object)
-}
+  const exercise1 = (object, prop, value) => {
+      return object[prop] = value;
+  }
+exercise1()
+console.log(lesson2)
