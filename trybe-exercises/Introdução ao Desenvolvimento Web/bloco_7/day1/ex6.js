@@ -28,6 +28,22 @@ const lesson1 = {
   const exercise5 = () => {
       const lessons = [lesson1, lesson2, lesson3]
       for(key in lessons){
-          Object.assign(allLessons, {lesson1}, {lesson2}, {lesson3})
+          Object.assign(allLessons, {lesson1: lesson1}, {lesson2: lesson2}, {lesson3})
       }
+      }
+
+      exercise5();
+const exercise6 = () => {
+   Object.values(allLessons, lesson1)
+   const arrayValues = [allLessons.lesson1.numeroEstudantes,
+    allLessons.lesson2.numeroEstudantes,
+    allLessons.lesson3.numeroEstudantes]
+    let numberStudents = 0;
+    for(key in arrayValues){
+      numberStudents += arrayValues[key]
+    }
+    console.log(numberStudents)
 }
+
+exercise6()
+
