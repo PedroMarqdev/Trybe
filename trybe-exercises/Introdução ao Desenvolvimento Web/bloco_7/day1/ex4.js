@@ -1,3 +1,5 @@
+// 4 - Crie uma função para listar os valores de um objeto. Essa função deve receber um objeto como parâmetro.
+
 const lesson1 = {
     materia: 'Matemática',
     numeroEstudantes: 20,

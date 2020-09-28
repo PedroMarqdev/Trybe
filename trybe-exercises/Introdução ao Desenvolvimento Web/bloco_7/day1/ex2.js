@@ -1,3 +1,5 @@
+// 2 - Crie uma função para listar as keys de um objeto. Essa função deve receber um objeto como parâmetro.
+
 const lesson1 = {
     materia: 'Matemática',
     numeroEstudantes: 20,

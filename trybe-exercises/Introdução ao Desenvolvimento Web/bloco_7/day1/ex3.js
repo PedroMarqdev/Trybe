@@ -1,3 +1,5 @@
+// 3 - Crie uma função para mostrar o tamanho de um objeto.
+
 const lesson1 = {
   materia: 'Matemática',
   numeroEstudantes: 20,
