@@ -1,3 +1,5 @@
+// 7 - Faça uma função que retorne true, caso nenhum author tenha nascido no mesmo ano, e false, caso contrário.
+
 const assert = require('assert');
 
 const books = [
@@ -63,10 +65,20 @@ const books = [
   },
 ];
 
-const expected_result = true
+const expected_result = false;
 
-function someBookWasReleaseOnThe80s() {
-  // escreva seu código aqui
+function authorUnique() {
+    let validate = false;
+    let gambiarra = 0;
+    const bornDate = books.forEach((element) => {
+        books.forEach((key) => {
+            if (gambiarra === 0) gambiarra += 1
+            else {
+                validate = books.every(() => element.author.birthYear !== key.author.birthYear)
+            }
+        })
+    })
+    return validate
 }
 
-assert.equal(someBookWasReleaseOnThe80s(), expected_result);
+assert.equal(authorUnique(), expected_result);
