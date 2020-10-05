@@ -1,5 +1,4 @@
-// 5- Crie uma função para contar quantos estudantes assistiram às aulas de Matemática. Use o objeto criado no exercício 5.
-
+// 9- Crie uma função para contar quantos estudantes assistiram às aulas de Matemática. Use o objeto criado no exercício 5.
 
 const lesson1 = {
     materia: 'Matemática',
