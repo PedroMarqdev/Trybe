@@ -72,7 +72,7 @@ const expected_result = [
 ]
 
 function oldBooks() {
-  const sixthyBooks = books.filter((book) => (2020 - book.releaseYear) > 60).map((bookName) => bookName.name)
+  const sixthyBooks = books.filter((book) => (2020 - book.releaseYear) > 60).map((bookName) => bookName.nae)
   return sixthyBooks
 }
 
