@@ -1,4 +1,4 @@
-// 6 -Crie um array com o nome de todos os livros com mais de 60 anos de publicação.
+// 3 - Calcule a média de idade que as pessoas autoras tinham quando seus respectivos livros foram lançados.
 
 const assert = require('assert');
 
@@ -65,15 +65,15 @@ const books = [
   },
 ];
 
-const expected_result = [
-  'O Senhor dos Anéis',
-  'Fundação',
-  'O Chamado de Cthulhu'
-]
+const expected_result = 43;
 
-function oldBooks() {
-  const sixthyBooks = books.filter((book) => (2020 - book.releaseYear) > 60).map((bookName) => bookName.name)
-  return sixthyBooks
+function averageAge() {
+  const age = books.reduce((current, next) => {
+      const bookage = (next.releaseYear - next.author.birthYear);
+      current.push(bookage);
+      return current
+  }, [])
+  return age.reduce((current, next) => current + next) / age.length
 }
 
-assert.deepEqual(oldBooks(), expected_result);
+assert.equal(averageAge(), expected_result);
