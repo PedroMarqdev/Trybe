@@ -3,11 +3,19 @@ import './App.css';
 
 
 class App extends React.Component {
- render() {
-  const clickEvent = () => {
+  constructor () {
+    super()
+    this.clickEvent = this.clickEvent.bind(this)
+  }
+
+  clickEvent() {
+    console.log(this)
     console.log(this.props.message);
   }
-   return <button onClick={clickEvent}>Botãozinho</button>
+ 
+ render() {
+  
+   return <button onClick={this.clickEvent}>Botãozinho</button>
  }
 }
 
