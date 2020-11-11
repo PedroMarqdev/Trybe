@@ -7,7 +7,7 @@ class PokeCard extends React.Component {
     const { name, type, averageWeight, image, moreInfo } = data;
     const { value, measurementUnit } = averageWeight;
     return (
-      <div className='poke-card'>
+      <div className={`poke-card ${type.toLowerCase()}`}>
         <div className='poke-card-info'>
           <p>Nome: {name}</p>
           <p>Tipo: {type}</p>

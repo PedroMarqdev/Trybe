@@ -50,7 +50,7 @@ class Search extends React.Component {
           <input onChange={this.changeFunc} id='pokeName' type='text' placeholder='Digite o nome do Pokemon' />
           <div className='type-buttons'>
               <button onClick={this.returnAll}>All</button>
-            {this.typeGenerator().map((type) => (<button onClick={this.filterType} key={type}>{type}</button>))}
+            {this.typeGenerator().map((type) => (<button className={`${type.toLowerCase()} button`}onClick={this.filterType} key={type}>{type}</button>))}
           </div>
         </section>
         <section className='poke-dex'>
