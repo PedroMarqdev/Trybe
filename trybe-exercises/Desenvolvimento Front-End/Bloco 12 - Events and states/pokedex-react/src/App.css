@@ -1,3 +1,21 @@
+
+.main-app, .poke-app{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inputDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hero-title {
+  text-align: center;
+  margin: 10px;
+  font-size: 2em;
+}
+
 .poke-dex {
   display: flex;
   justify-content: space-around;
@@ -6,10 +24,12 @@
 
 .poke-card {
   border: 1px solid black;
-  border-radius: 10%;
+  border-radius: 5%;
   padding: 1%;
   display:flex;
   margin: 2%;
+  flex-grow: 2;
+  justify-content: space-around;
 }
 
 .poke-card-info {
