@@ -11,24 +11,33 @@ class App extends React.Component{
     this.changeFunc = this.changeFunc.bind(this)
   }
 
-  changeFunc(event) {
+  changeFunc({ target }) {
+    const { name } = target
+    const value = target.type === 'checkbox' ? target.checked : target.value
     this.setState({
-      test: event.target.value,
+      [name]: value
     }) 
   }
   render() {
-    return (<div>
+    return (
+    <div>
       <form>
-      <input type='text'></input>
-        <select>
+        <div className='form-control'>
+        <input onChange={this.changeFunc} type='text' name='teste 1' value={this.state['teste 1']}></input>
+        </div>
+        <div className='form-control'>
+        <select onChange={this.changeFunc} name='teste 2' value={this.state['teste 2']}>
           <option value='1'>Teste 1</option>
           <option value='2'>Teste 2</option>
         </select>
-        <textarea onChange={this.changeFunc}/>
+        </div>
+        <div className='form-control'> 
+        <input onChange={this.changeFunc} name='checkbox' type='checkbox' value={this.state.checkbox}></input>
+        </div>
+        <textarea onChange={this.changeFunc} name='teste 3' value={this.state['teste 3']}/>
       </form>
-    </div>
+      </div>
     )
   }
 }
-
 export default App;
