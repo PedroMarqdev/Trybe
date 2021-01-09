@@ -15,7 +15,7 @@ class App extends React.Component {
   }
 
   changeFunc({ target }) {
-    const { name} = target;
+    const { name } = target;
     const value = target.type === 'checkbox' ? target.checked : target.value;
     this.setState({
       [name]: value,
@@ -61,7 +61,5 @@ class App extends React.Component {
     );
   }
 }
-App.defaultProps = {
-  value: ''
-}
+
 export default App;
